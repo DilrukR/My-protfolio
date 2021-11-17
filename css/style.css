@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: fixed;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    width: 100%;
+  }
+  header .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 5px 10px;
+  }
+  header .header-container .logo a img {
+    padding-top: 10px;
+    width: 50px;
+  }
+  header .header-container .icon-container {
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
+    color: #f7b500;
+  }
+  header .header-container .icon-container .hamburger {
+    font-size: 30px;
+  }
+  header .header-container .icon-container .ham-close {
+    font-size: 30px;
+    display: none;
+  }
+  header .nav-container {
+    -webkit-transform: translateX(70%);
+            transform: translateX(70%);
+    width: 100%;
+    inset: 0 0 0 40%;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 30%;
+    padding-left: 40px;
+    line-height: 50px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.76);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+  }
+  header .nav-container ul li {
+    list-style: none;
+  }
+  header .nav-container ul li a {
+    font-family: "Lilita One", cursive;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    color: #7510f7;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  header .nav-container ul li a:hover {
+    color: #7510f7;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 20px;
+  }
+  header .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 5px 10px;
+  }
+  header .header-container .logo a img {
+    padding-top: 10px;
+    width: 100px;
+  }
+  header .header-container .icon-container {
+    display: none;
+  }
+  header .nav-container ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 40px 0;
+    right: 30%;
+  }
+  header .nav-container ul li {
+    list-style: none;
+  }
+  header .nav-container ul li a {
+    font-family: "Poppins", sans-serif;
+    font-weight: lighter;
+    font-size: 1.3rem;
+    color: #7510f7;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  header .nav-container ul li a:hover {
+    color: #7510f7;
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+}
+
+.hero .hero-text {
+  padding: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #141c3a;
+  font-family: "Michroma", sans-serif;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.hero .hero-text img {
+  width: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.hero .hero-text h3 {
+  padding-top: 20px;
+  font-size: 1.3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding-top: 80px;
+  }
+  .hero .hero-text {
+    padding: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #141c3a;
+    font-family: "Michroma", sans-serif;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+  .hero .hero-text img {
+    padding-top: 70px;
+    width: 90%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .hero .hero-text h3 {
+    font-size: 0.8rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
