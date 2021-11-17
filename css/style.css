@@ -29,6 +29,7 @@
     padding: 0 20px;
     height: 60px;
     width: 100%;
+    background: #fff;
   }
   header .header-container {
     display: -webkit-box;
@@ -48,7 +49,7 @@
   }
   header .header-container .icon-container {
     position: relative;
-    z-index: 99;
+    z-index: 99999;
     cursor: pointer;
     color: #f7b500;
   }
@@ -72,6 +73,7 @@
     padding-left: 40px;
     line-height: 50px;
     position: absolute;
+    z-index: 9999;
     background-color: rgba(255, 255, 255, 0.76);
     -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
@@ -111,9 +113,12 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    background-color: #fff;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
     padding: 0 20px;
   }
   header .header-container {
@@ -139,11 +144,12 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-left: -500px;
     padding: 40px 0;
-    right: 30%;
   }
   header .nav-container ul li {
     list-style: none;
+    padding: 0 10px;
   }
   header .nav-container ul li a {
     font-family: "Poppins", sans-serif;
@@ -157,13 +163,15 @@
     transition: all 0.3s ease-in-out;
   }
   header .nav-container ul li a:hover {
-    color: #7510f7;
+    color: #141c3a;
+    outline: 1px solid #141c3a;
   }
 }
 
 .hero {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
 .hero .hero-text {
@@ -237,6 +245,94 @@
   }
   .hero .hero-text h3 {
     font-size: 0.8rem;
+  }
+}
+
+.header-active {
+  background: transparent;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-art {
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .image-art {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .image-art img {
+    width: 350px;
+    margin-top: -10px;
+    position: relative;
+    z-index: -1;
+  }
+}
+
+.about-me {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  padding: 70px 200px;
+  background-color: #7510f7;
+}
+
+.about-me h1 {
+  font-family: anton, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #141c3a;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.about-me h1:hover {
+  color: #f7b500;
+  outline: 1px solid #f7b500;
+}
+
+.about-me p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .about-me {
+    padding: 40px 30px;
+  }
+  .about-me h1 {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+  .about-me p {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
