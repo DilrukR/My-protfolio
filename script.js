@@ -17,11 +17,13 @@ function closeNav() {
   hclose.style.display = "none";
 }
 
+// for the navbar scroll effect
+
 const header = document.querySelector("header");
 const sectionOne = document.querySelector(".hero");
 
 const secionOneOptions = {
-  rootMargin: "-100px 0px 0px 0px",
+  rootMargin: "-700px 0px 0px 0px",
 };
 
 const sectionObserver = new IntersectionObserver(function (
@@ -30,9 +32,9 @@ const sectionObserver = new IntersectionObserver(function (
 ) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      header.classList.add("header-active");
-    } else {
       header.classList.remove("header-active");
+    } else {
+      header.classList.add("header-active");
 
       console.log(entry.target);
     }

@@ -17,6 +17,7 @@
   }
   body {
     overflow-x: hidden;
+    overflow-wrap: hidden;
   }
   header {
     -webkit-box-pack: justify;
@@ -28,8 +29,10 @@
             align-items: center;
     padding: 0 20px;
     height: 60px;
-    width: 100%;
-    background: #fff;
+    width: 100vw;
+    background: #141c3a;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   header .header-container {
     display: -webkit-box;
@@ -102,7 +105,7 @@
 @media screen and (min-width: 768px) {
   header {
     height: 100px;
-    width: 100%;
+    width: 100vw;
     position: fixed;
     top: 0;
     left: 0;
@@ -113,7 +116,6 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    background-color: #fff;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -168,8 +170,30 @@
   }
 }
 
+.header-active {
+  background: #141c3a;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-active .header-container .logo {
+  visibility: hidden;
+}
+
+.header-active .nav-container {
+  background-color: #141c3a;
+}
+
+.header-active .nav-container ul li a {
+  color: #f7b500;
+}
+
+.header-active .nav-container ul li a:hover {
+  color: #fff;
+}
+
 .hero {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
@@ -238,7 +262,7 @@
     letter-spacing: 2px;
   }
   .hero .hero-text img {
-    padding-top: 70px;
+    padding-top: 50px;
     width: 90%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -248,16 +272,8 @@
   }
 }
 
-.header-active {
-  background: transparent;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
 .image-art {
-  width: 100%;
-  height: 100%;
-  padding-top: 100px;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -271,7 +287,6 @@
 
 @media only screen and (max-width: 768px) {
   .image-art {
-    height: 100%;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -285,7 +300,7 @@
   }
   .image-art img {
     width: 350px;
-    margin-top: -10px;
+    margin-top: -150px;
     position: relative;
     z-index: -1;
   }
@@ -295,7 +310,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 400px;
   text-align: center;
   padding: 70px 200px;
@@ -333,6 +348,289 @@
   }
   .about-me p {
     font-size: 1rem;
+  }
+}
+
+.head-of-box {
+  margin-top: 150px;
+  text-align: center;
+  font-family: "Lilita One", cursive;
+}
+
+.box-container {
+  margin: 100px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 25% 25%;
+      grid-template-columns: 25% 25% 25%;
+  grid-auto-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  width: 100vw;
+}
+
+.box-container .box {
+  height: 300px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 30px 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.box-container .box h3 {
+  font-family: anton, sans-serif;
+  font-weight: lighter;
+  font-size: 1.5rem;
+  padding-top: 30px;
+}
+
+.box-container .box p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  color: #141c3a;
+}
+
+.box-container .box .icon {
+  width: 100px;
+  height: 100px;
+  margin-top: 30px;
+}
+
+.box-container .box .icon .fa {
+  font-size: 3rem;
+  color: #141c3a;
+}
+
+.box-container .box:hover {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media only screen and (max-width: 768px) {
+  .head-of-box {
+    margin-top: 100px;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .box-container {
+    padding-left: 5%;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    grid-auto-flow: row;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .box-container .box {
+    width: 80%;
+    margin: 30px;
+  }
+  .box-container .box:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.heading {
+  margin-top: 100px;
+}
+
+.my-works {
+  margin-top: 100px;
+  padding-top: 20px;
+  width: 100vw;
+  height: 110vh;
+  background: #7510f7;
+}
+
+.my-works .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.my-works .box {
+  width: 400px;
+  height: 300px;
+  margin: 10px;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.my-works .box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+
+.my-works .box .text-con {
+  position: absolute;
+  z-index: 9;
+  overflow: hidden;
+  width: 400px;
+  height: 300px;
+}
+
+.my-works .box .text-con h1 {
+  color: #fff;
+  padding-top: 20px;
+}
+
+.my-works .box .text-con p {
+  padding-top: 30px;
+  color: #fff;
+}
+
+.my-works .box .text-con::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  background: #000000ce;
+  border-radius: 20px;
+}
+
+.my-works .box h3 {
+  font-family: anton, sans-serif;
+  font-weight: lighter;
+  font-size: 1.5rem;
+  padding-top: 30px;
+}
+
+.my-works .box p {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  color: #141c3a;
+}
+
+.my-works .box .icon {
+  width: 100px;
+  height: 100px;
+  margin-top: 30px;
+}
+
+.my-works .box .icon .fa {
+  font-size: 3rem;
+  color: #141c3a;
+}
+
+.my-works .text-con2 {
+  position: absolute;
+  width: 400px;
+  height: 300px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding-top: 70px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+  color: #fff;
+  z-index: -1;
+}
+
+.my-works .text-con2 p {
+  color: #fff;
+}
+
+.my-works .box:hover {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.my-works .box:hover .text-con::after {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.my-works .box:hover .text-con2 {
+  z-index: 99;
+  position: absolute;
+}
+
+.my-works .box-1 {
+  padding-top: 40px;
+  padding-right: 30px;
+  width: 400px;
+  height: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+  .my-works {
+    overflow: hidden;
+    width: 100vw;
+    right: 0;
+    left: 0;
+  }
+  .my-works .container {
+    display: block;
+    width: 100%;
+  }
+  .my-works .container .box {
+    width: 300px;
   }
 }
 /*# sourceMappingURL=style.css.map */
