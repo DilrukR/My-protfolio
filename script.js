@@ -23,7 +23,7 @@ const header = document.querySelector("header");
 const sectionOne = document.querySelector(".hero");
 
 const secionOneOptions = {
-  rootMargin: "-700px 0px 0px 0px",
+  rootMargin: "-400px 0px 0px 0px",
 };
 
 const sectionObserver = new IntersectionObserver(function (
