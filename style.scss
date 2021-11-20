@@ -263,6 +263,7 @@ $font-discription: anton, sans-serif;
 }
 
 .image-art {
+  padding-top: 200px;
   width: 100vw;
 
   display: flex;
@@ -333,7 +334,7 @@ $font-discription: anton, sans-serif;
 .head-of-box {
   margin-top: 150px;
   text-align: center;
-  font-family: $font-tertiary;
+  font-family: $font-discription;
 }
 
 .box-container {
@@ -414,8 +415,15 @@ $font-discription: anton, sans-serif;
     }
   }
 }
+
+// for my work section includes hover effects
+
 .heading {
-  margin-top: 100px;
+  margin-top: 150px;
+  font-family: $font-discription;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
 }
 
 .my-works {
@@ -424,6 +432,7 @@ $font-discription: anton, sans-serif;
 
   width: 100vw;
   height: 110vh;
+  padding-bottom: 200px;
 
   background: #7510f7;
 
@@ -552,6 +561,19 @@ $font-discription: anton, sans-serif;
     padding-right: 30px;
     width: 400px;
     height: 300px;
+    .text-con {
+      h1 {
+        font-size: 2.5rem;
+        color: #fff;
+        font-family: $font-secondary;
+      }
+      p {
+        padding-top: 20px;
+        font-size: 1.3rem;
+        color: #fff;
+        font-family: $font-secondary;
+      }
+    }
   }
 }
 @media only screen and (max-width: 768px) {
@@ -567,6 +589,183 @@ $font-discription: anton, sans-serif;
 
       .box {
         width: 300px;
+
+        .text-con,
+        .text-con2 {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.footer-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: #141c3a;
+  height: 100px;
+  margin-top: 100px;
+  footer {
+    position: relative;
+    width: 100vw;
+    background-color: $color-primary;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #141c3a;
+
+    .social-icons {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+      flex-wrap: wrap;
+
+      li {
+        list-style: none;
+
+        a {
+          font-size: 2.5em;
+          color: #fff;
+          margin: 0 10px;
+          display: inline-block;
+          transition: all 0.5s;
+          text-decoration: none;
+          &:hover {
+            transform: translateY(-10px);
+          }
+        }
+      }
+    }
+    .footer-menu {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+      flex-wrap: wrap;
+      li {
+        list-style: none;
+
+        a {
+          font-size: 1.2em;
+          color: #fff;
+          margin: 0 10px;
+          display: inline-block;
+          transition: all 0.2s;
+          text-decoration: none;
+          opacity: 0.5;
+          font-family: $font-primary;
+          text-transform: uppercase;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .footer-menu {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 0;
+      flex-wrap: wrap;
+      li {
+        list-style: none;
+
+        a {
+          font-size: 1.2em;
+          color: #fff;
+          margin: 0 10px;
+          display: inline-block;
+          transition: all 0.2s;
+          text-decoration: none;
+          opacity: 0.5;
+          font-family: $font-primary;
+          text-transform: uppercase;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    p {
+      font-family: $font-primary;
+      font-size: 1.2rem;
+      font-weight: lighter;
+      color: #fff;
+
+      a {
+        color: #fff;
+      }
+    }
+
+    .waves {
+      .wave {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url("./img/wave-1.png");
+        background-size: 2000px 100px;
+      }
+
+      #wave-1 {
+        z-index: 1000;
+        position: absolute;
+        opacity: 1;
+        margin-bottom: 0;
+        animation: animatewave 4s linear infinite;
+      }
+
+      #wave-2 {
+        z-index: 1001;
+
+        opacity: 0.8;
+
+        bottom: 10px;
+        animation: animatewave_02 4s linear infinite;
+      }
+
+      #wave-3 {
+        z-index: 1002;
+
+        opacity: 0.2;
+        bottom: 15px;
+        animation: animatewave 4s linear infinite;
+      }
+
+      #wave-4 {
+        z-index: 1003;
+
+        opacity: 0.5;
+        bottom: 20px;
+        animation: animatewave_02 4s linear infinite;
+      }
+
+      @keyframes animatewave {
+        0% {
+          background-position-x: 2000px;
+        }
+        100% {
+          background-position-x: 0px;
+        }
+      }
+
+      @keyframes animatewave_02 {
+        0% {
+          background-position-x: 0px;
+        }
+        100% {
+          background-position-x: 2000px;
+        }
       }
     }
   }
