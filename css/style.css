@@ -848,6 +848,8 @@
   bottom: 15px;
   -webkit-animation: animatewave 4s linear infinite;
           animation: animatewave 4s linear infinite;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 .footer-div footer .waves #wave-4 {
@@ -856,6 +858,8 @@
   bottom: 20px;
   -webkit-animation: animatewave_02 4s linear infinite;
           animation: animatewave_02 4s linear infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 @-webkit-keyframes animatewave {

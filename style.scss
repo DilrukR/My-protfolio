@@ -741,6 +741,7 @@ $font-discription: anton, sans-serif;
         opacity: 0.2;
         bottom: 15px;
         animation: animatewave 4s linear infinite;
+        animation-delay: 0.6s;
       }
 
       #wave-4 {
@@ -749,6 +750,7 @@ $font-discription: anton, sans-serif;
         opacity: 0.5;
         bottom: 20px;
         animation: animatewave_02 4s linear infinite;
+        animation-delay: 0.5s;
       }
 
       @keyframes animatewave {
