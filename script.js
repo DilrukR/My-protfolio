@@ -21,6 +21,7 @@ function closeNav() {
 
 const header = document.querySelector("header");
 const sectionOne = document.querySelector(".hero");
+const sectionTwo = document.querySelector(".texttest");
 
 const secionOneOptions = {
   rootMargin: "-400px 0px 0px 0px",
