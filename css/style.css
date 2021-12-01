@@ -10,6 +10,15 @@
           box-sizing: border-box;
 }
 
+#snow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+}
+
 @media screen and (max-width: 768px) {
   * {
     margin: 0;
@@ -33,6 +42,7 @@
     background: #141c3a;
     -webkit-box-shadow: none;
             box-shadow: none;
+    z-index: 99999;
   }
   header .header-container {
     display: -webkit-box;
@@ -100,6 +110,9 @@
   header .nav-container ul li a:hover {
     color: #7510f7;
   }
+  header .nav-container ul li a .active {
+    color: #f7b500;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -109,7 +122,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 9999;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -171,9 +184,11 @@
 }
 
 .header-active {
-  background: #141c3a;
+  background: #141c3aaf;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 .header-active .header-container .logo {
@@ -372,7 +387,9 @@
       -ms-flex-pack: center;
           justify-content: center;
   gap: 20px;
+  z-index: 200;
   width: 100vw;
+  position: relative;
 }
 
 .box-container .box {
@@ -470,8 +487,8 @@
   margin-top: 100px;
   padding-top: 20px;
   width: 100vw;
-  height: 110vh;
-  padding-bottom: 200px;
+  height: 120vh;
+  padding-bottom: 400px;
   background: #7510f7;
 }
 
@@ -505,6 +522,8 @@
   border-radius: 20px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  position: relative;
+  z-index: 99;
   margin: 10px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -669,7 +688,7 @@
           align-items: flex-end;
   background-color: #141c3a;
   height: 100px;
-  margin-top: 120px;
+  margin-top: 115px;
 }
 
 .footer-div footer {
@@ -693,6 +712,7 @@
           align-items: center;
   background-color: #141c3a;
   bottom: 0;
+  z-index: 99;
 }
 
 .footer-div footer .social-icons {
@@ -902,9 +922,24 @@
   padding-top: 100px;
   width: 100%;
   height: 100%;
+  position: relative;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: url("./img/petr-machacek-BeVGrXEktIk-unsplash.jpg");
+  background-size: 100%;
+  background-position: center;
 }
 /*# sourceMappingURL=style.css.map */

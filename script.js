@@ -1,9 +1,11 @@
 const nav = document.querySelector(".nav-container");
 const ham = document.querySelector(".hamburger");
 const hclose = document.querySelector(".ham-close");
+const a = document.querySelector("a");
 
 ham.addEventListener("click", openNav);
 hclose.addEventListener("click", closeNav);
+a.addEventListener("click", activeClass);
 
 function openNav() {
   nav.style.transform = "translateX(0)";
@@ -17,11 +19,14 @@ function closeNav() {
   hclose.style.display = "none";
 }
 
+function activeClass() {
+  a.classList.add("active");
+}
 // for the navbar scroll effect
 
 const header = document.querySelector("header");
 const sectionOne = document.querySelector(".hero");
-const sectionTwo = document.querySelector(".texttest");
+const sectionTwo = document.querySelector(".contact");
 
 const secionOneOptions = {
   rootMargin: "-400px 0px 0px 0px",
@@ -45,3 +50,4 @@ secionOneOptions);
 
 sectionObserver.observe(header);
 sectionObserver.observe(sectionOne);
+sectionObserver.observe(sectionTwo);
