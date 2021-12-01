@@ -27,6 +27,7 @@
   body {
     overflow-x: hidden;
     overflow-wrap: hidden;
+    background: #ada6a68f;
   }
   header {
     -webkit-box-pack: justify;
@@ -116,6 +117,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    background: #ada6a68f;
+  }
   header {
     height: 100px;
     width: 100vw;

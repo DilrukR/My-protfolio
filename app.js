@@ -17,7 +17,7 @@ particlesJS(
   {
     particles: {
       number: {
-        value: 2000,
+        value: 1000,
         density: {
           enable: true,
           value_area: 800,
@@ -113,7 +113,7 @@ particlesJS(
           distance: 200,
         },
         push: {
-          particles_nb: 4,
+          particles_nb: 40,
         },
         remove: {
           particles_nb: 2,
