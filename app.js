@@ -42,7 +42,7 @@ particlesJS(
         },
       },
       opacity: {
-        value: 5,
+        value: 0.8,
         random: false,
         anim: {
           enable: false,
