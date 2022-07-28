@@ -35,7 +35,6 @@ $font-discription: anton, sans-serif;
   body {
     overflow-x: hidden;
     overflow-wrap: hidden;
-    background: #ada6a68f;
   }
 
   header {
@@ -124,9 +123,6 @@ $font-discription: anton, sans-serif;
 // header for desktop view
 
 @media screen and (min-width: 768px) {
-  body {
-    background: #ada6a68f;
-  }
   header {
     height: 100px;
     width: 100vw;
